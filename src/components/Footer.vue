@@ -50,7 +50,17 @@
       </div>
       <div class="footer-bottom">
           <div class="container">
-
+              <div class="cta-btn">
+                  <a href="#">Sign-up now!</a>
+              </div>
+              <div class="social">
+                  <p>Follow us</p>
+                  <img src="../assets/img/footer-facebook.png" alt="">
+                  <img src="../assets/img/footer-periscope.png" alt="">
+                  <img src="../assets/img/footer-pinterest.png" alt="">
+                  <img src="../assets/img/footer-twitter.png" alt="">
+                  <img src="../assets/img/footer-youtube.png" alt="">
+              </div>
           </div>
       </div>
   </footer>
@@ -113,6 +123,49 @@ export default {
             font-weight: 700;
             color: white;
             text-transform: uppercase;
+        }
+    }
+}
+.footer-bottom {
+    background-color: $color-bg-footer;
+    height: 100px;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .cta-btn {
+            flex-basis: auto;
+            border: 2px solid $color-primary;
+            a {
+                color: white;
+                display: block;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 0.7em;
+                font-weight: 700;
+                padding: 1em;
+                &:hover,
+                &:active {
+                    background-color: $color-primary;
+                }
+            }
+        }
+        .social {
+            flex-basis: auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            p {
+                font-size: 0.8em;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: $color-primary;
+                margin-right: 1em;
+            }
+            img {
+                width: 30px;
+                margin-right: 1em;
+            }
         }
     }
 }
