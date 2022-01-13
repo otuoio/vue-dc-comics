@@ -46,7 +46,7 @@ export default {
     }
 
     .header-bottom {
-        height: 100px;
+        height: 80px;
         width: 100%;
         background-color: white;
         .container {
