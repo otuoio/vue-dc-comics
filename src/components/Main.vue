@@ -4,6 +4,15 @@
           <section class="jumbotron">
               <div class="message">Current series</div>
           </section>
+          <div class="container">
+              <div class="cards">
+                  <Card v-for="(card, index) in cards"
+                  :key="index"
+                  :image="card.thumb"
+                  :alt="card.series"
+                  :text="card.series" />
+              </div>
+          </div>
       </div>
       <div class="main-links">
           <div class="container">
@@ -43,8 +52,13 @@
 </template>
 
 <script>
+import Card from './Card.vue'
+
 export default {
     name: "Main",
+    components: {
+        Card
+    },
     data() {
         return {
             cards: [
@@ -152,6 +166,10 @@ export default {
             left: calc(35% / 2);
             transform: translate(-10%, 50%);
         }
+    }
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
     }
 }
 .main-links {
