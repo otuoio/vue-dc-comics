@@ -144,7 +144,6 @@ export default {
 @import '../assets/scss/partials/_variables.scss';
 
 .main-content {
-    height: 600px;
     background-color: $color-secondary;
     .jumbotron {
         height: 400px;
@@ -170,6 +169,7 @@ export default {
     .cards {
         display: flex;
         flex-wrap: wrap;
+        padding: 2em;
     }
 }
 .main-links {
