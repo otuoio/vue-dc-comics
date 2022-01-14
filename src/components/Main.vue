@@ -4,7 +4,7 @@
           <section class="jumbotron">
               <div class="message">Current series</div>
           </section>
-          <div class="container">
+          <div class="container text-center">
               <div class="cards">
                   <Card v-for="(card, index) in cards"
                   :key="index"
@@ -12,6 +12,7 @@
                   :alt="card.series"
                   :text="card.series" />
               </div>
+              <div class="more-btn"><a href="#">Load more</a></div>
           </div>
       </div>
       <div class="main-links">
@@ -141,6 +142,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/scss/partials/_mixins.scss';
 @import '../assets/scss/partials/_variables.scss';
 
 .main-content {
@@ -166,10 +168,22 @@ export default {
             transform: translate(-10%, 50%);
         }
     }
-    .cards {
-        display: flex;
-        flex-wrap: wrap;
+    .container .cards {
+        @include flex(start, flex-start, wrap);
         padding: 2em;
+    }
+    .container .more-btn {
+        background-color: $color-primary;
+        display: inline-block;
+        margin: 1em;
+        a {
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.7em;
+            font-weight: 700;
+            padding: 1em 3em;
+        }
     }
 }
 .main-links {
