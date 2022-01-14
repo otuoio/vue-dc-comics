@@ -95,7 +95,7 @@ export default {
         align-content: flex-start;
         padding: 1em;
         .dc-comics {
-            flex-basis: 70%;
+            flex-basis: auto;
             margin: .4em;
         }
         .shop {
