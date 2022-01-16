@@ -17,7 +17,11 @@
       </div>
       <div class="main-links">
           <div class="container">
-              <div class="col">
+              <MainLinks v-for="(link, index) in links" :key="index"
+              :image="link.icon"
+              :alt="link.text"
+              :text="link.text"/>
+              <!-- <div class="col">
                   <div class="icon">
                       <img src="../assets/img/buy-comics-digital-comics.png" alt="">
                   </div>
@@ -46,19 +50,21 @@
                       <img src="../assets/img/buy-dc-power-visa.svg" alt="">
                   </div>
                   <p>Digital comics</p>
-              </div>
+              </div> -->
           </div>
       </div>
   </main>
 </template>
 
 <script>
-import Card from './Card.vue'
+import Card from './partials/Card.vue';
+import MainLinks from './partials/MainLinks.vue';
 
 export default {
     name: "Main",
     components: {
-        Card
+        Card,
+        MainLinks
     },
     data() {
         return {
@@ -135,7 +141,29 @@ export default {
                     series: "Catwoman",
                     type: "graphic novel"
                 }
-]
+            ],
+            links: [
+                {
+                    icon: "../assets/img/buy-comics-digital-comics.png",
+                    text: "Digital comics"
+                },
+                {
+                    icon: "../assets/img/buy-comics-merchandise.png",
+                    text: "Dc merchandise"
+                },
+                {
+                    icon: "../assets/img/buy-comics-shop-locator.png",
+                    text: "Comic shop locator"
+                },
+                {
+                    icon: "../assets/img/buy-comics-subscriptions.png",
+                    text: "Subscriptions"
+                },
+                {
+                    icon: "../assets/img/buy-comics-power-visa.svg",
+                    text: "Dc power visa"
+                },
+            ]
         }
     }
 }
@@ -190,30 +218,7 @@ export default {
     background-color: $color-primary;
     height: 150px;
     .container {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        .col {
-            height: 100%;
-            flex-basis: calc(100% / 6);
-            margin-right: 2em;
-            padding: 3em 0;
-            display: flex;
-            align-items: center;
-            .icon {
-                height: 60%;
-                margin-right: 1em;
-                img {
-                    height: 100%;
-                }
-            }
-            p {
-                font-size: 0.8em;
-                text-transform: uppercase;
-                font-weight: 400;
-                color: white;
-            }
-        }
+        @include flex(space-around, center, no-wrap);
     }
 }
 

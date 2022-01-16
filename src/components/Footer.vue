@@ -90,9 +90,9 @@ export default {
         background-position: right;
         background-size: contain;
         display: flex;
-        flex-direction: column;
         flex-wrap: wrap;
         align-content: flex-start;
+        flex-direction: column;
         padding: 1em;
         .dc-comics {
             flex-basis: auto;

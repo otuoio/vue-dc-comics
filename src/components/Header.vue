@@ -39,6 +39,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/scss/partials/_variables.scss';
+@import '../assets/scss/partials/_mixins.scss';
     .header-top {
         width: 100%;
         height: 20px;
@@ -50,9 +51,7 @@ export default {
         width: 100%;
         background-color: white;
         .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            @include flex(space-between, center, no-wrap);
             padding: 1em;
             .logo {
                 height: 100%;
@@ -68,9 +67,7 @@ export default {
                 flex-basis: 60%;
                 ul {
                     list-style: none;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    @include flex(center, center, no-wrap);
                     li a {
                         text-decoration: none;
                         color: gray;
