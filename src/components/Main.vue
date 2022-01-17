@@ -144,24 +144,24 @@ export default {
             ],
             links: [
                 {
-                    icon: "../assets/img/buy-comics-digital-comics.png",
-                    text: "Digital comics"
+                    "icon": require("../assets/img/buy-comics-digital-comics.png"),
+                    "text": "Digital comics"
                 },
                 {
-                    icon: "../assets/img/buy-comics-merchandise.png",
-                    text: "Dc merchandise"
+                    "icon": require("../assets/img/buy-comics-merchandise.png"),
+                    "text": "Dc merchandise"
                 },
                 {
-                    icon: "../assets/img/buy-comics-shop-locator.png",
-                    text: "Comic shop locator"
+                    "icon": require("../assets/img/buy-comics-shop-locator.png"),
+                    "text": "Comic shop locator"
                 },
                 {
-                    icon: "../assets/img/buy-comics-subscriptions.png",
-                    text: "Subscriptions"
+                    "icon": require("../assets/img/buy-comics-subscriptions.png"),
+                    "text": "Subscriptions"
                 },
                 {
-                    icon: "../assets/img/buy-comics-power-visa.svg",
-                    text: "Dc power visa"
+                    "icon": require("../assets/img/buy-dc-power-visa.svg"),
+                    "text": "Dc power visa"
                 },
             ]
         }
